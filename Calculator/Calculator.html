@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="CalculatorStyle.css">
+    <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus icon'></i>  -->
+         <img class="logoImg" src="../1.png" alt="logoImg">
+            <div class="logo_name"> Handy </div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <!-- <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li> -->
+      <li>
+        <a href="../index.html">
+          <!-- <i class='bx bx-grid-alt'></i> -->
+          <i class='bx bx-home-heart' ></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="../DigitalClock/DigitalClock.html">
+          <!-- <i class='bx bx-grid-alt'></i> -->
+          <i class='bx bx-time-five'></i>
+          <span class="links_name">Digital Clock</span>
+        </a>
+         <span class="tooltip">Digital Clock</span>
+      </li>
+      <li>
+       <a href="../ToDo/ToDo.html">
+         <!-- <i class='bx bx-user' ></i> -->
+         <i class='bx bx-task' ></i>
+         <span class="links_name">To Do</span>
+       </a>
+       <span class="tooltip">To Do</span>
+     </li>
+     <li>
+       <a href="../Notes/Notes.html">
+         <!-- <i class='bx bx-chat' ></i> -->
+         <i class='bx bx-notepad' ></i>
+         <span class="links_name">Notes</span>
+       </a>
+       <span class="tooltip">Notes</span>
+     </li>
+     <li>
+       <a href="Calculator.html">
+         <!-- <i class='bx bx-pie-chart-alt-2' ></i> -->
+         <i class='bx bx-calculator' ></i>
+         <span class="links_name">Calculator</span>
+       </a>
+       <span class="tooltip">Calculator</span>
+     </li>
+     <li>
+       <a href="../Calendar/Calendar.html">
+         <!-- <i class='bx bx-folder' ></i> -->
+         <i class='bx bx-calendar' ></i>
+         <span class="links_name">Calender</span>
+       </a>
+       <span class="tooltip">Calender</span>
+     </li>
+     <li>
+       <a href="../Weather/Weather.html">
+         <!-- <i class='bx bx-cart-alt' ></i> -->
+         <i class='bx bx-cloud' ></i>
+         <span class="links_name">Weather</span>
+       </a>
+       <span class="tooltip">Weather</span>
+     </li>
+     <!-- <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li> -->
+     <li class="profile">
+         <div class="profile-details">
+           <img src="../PortfolioLogo.png" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Harsika Agarwal</div>
+             <div class="job">Programmer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <!-- <section class="home-section">
+      <div class="text">Calculator</div>
+  </section> -->
+
+  <div class="container">
+    <div class="display">
+        <input id="screen" type="text" placeholder="0">
+    </div>
+
+    <div class="btns">
+        <div class="row">
+            <button id="ce" onclick="backspc()">CE</button>
+            <button onclick="fact()">x!</button>
+            <button class="btn">(</button>
+            <button class="btn">)</button>
+            <button class="btn">%</button>
+            <button id="ac" onclick="screen.value=''">AC</button>
+        </div>
+
+        <div class="row">
+            <button onclick="sin()">sin</button>
+            <button onclick="pi()">π</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">÷</button>
+        </div>
+
+        <div class="row">
+            <button onclick="cos()">cos</button>
+            <button onclick="log()">log</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">×</button>
+        </div>
+
+        <div class="row">
+            <button onclick="tan()">tan</button>
+            <button onclick="sqrt()">√</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+        </div>
+
+        <div class="row">
+            <button onclick="e()">e</button>
+            <button onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">2</span> </button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+            <button class="btn">+</button>
+        </div>
+    </div>
+</div>
+
+  <script src="CalculatorScript.js"></script>
+
+</body>
+</html>
